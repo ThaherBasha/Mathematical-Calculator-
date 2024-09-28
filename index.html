@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ca{
+            border:2px solid orange;;
+            background-color:orangered;
+            color:pink;
+        }
+        .second{
+            background-color:orange;
+        }
+        .third{
+            background-color:green
+        }
+        .fourth{
+            background-color:blueviolet;
+        }
+        .fifth{
+            background-color:brown;
+        }
+    </style>
+    
+</head>
+<body>
+    <script>
+        function show(input){
+            document.getElementById("res").value+=input;
+        }
+        function result(){
+            let total=eval(document.getElementById("res").value)
+            document.getElementById("res").value=total;
+        }
+        function clr(){
+            document.getElementById("res").value="";
+        }
+      
+
+    </script>
+    <table border="1"cellspacing="10px" cellpadding="10px" height="500px;" width="400px;">
+    <caption class="ca" style="height:25px;">Mathematical Calculator</caption>
+    <tr>
+        <td colspan="3" style="background-color:black;"><input type="text" id="res"style="width:300px;height:20px;" ></td>
+        <td style="background-color:yellow;"><button onclick="clr()">AC</button></td>
+    </tr>
+    <tr class="second">
+        <td align="center"><button onclick="show(1)">1</button></td>
+        <td align="center"><button onclick="show(2)">2</button></td>
+        <td align="center"><button onclick="show(3)">3</button></td>
+        <td align="center"><button onclick="show('+')">+</button></td>
+    </tr>
+    <tr class="third">
+        <td align="center"><button onclick="show(4)">4</button></td>
+        <td align="center"><button onclick="show(5)">5</button></td>
+        <td align="center"><button onclick="show(6)">6</button></td>
+        <td align="center"><button onclick="show('-')">-</button></td>
+    </tr>
+    <tr class="fourth">
+        <td align="center" ><button onclick="show(7)">7</button></td>
+        <td align="center"><button onclick="show(8)">8</button></td>
+        <td align="center"><button onclick="show(9)">9</button></td>
+        <td align="center" ><button onclick="show('*')">*</button></td>
+    </tr>
+    <tr class="fifth">
+        <td align="center" ><button onclick="show(0)">0</button></td>
+        <td align="center"><button onclick="show('%')">%</button></td>
+        <td align="center"><button onclick="show('/')">/</button></td>
+        <td align="center"><button onclick="result()">=</button></td>
+
+    </tr>
+
+   
+    </table>
+</body>
+</html>
